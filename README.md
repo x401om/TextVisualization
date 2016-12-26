@@ -63,7 +63,7 @@ genetically|said|safety|engineered|study|test|great|deal|controversy|foods
 ![](Figures/figure_2.png)
 **Рис.2.** Распределение термов в Википедии, наглядный пример закона Ципфа. По оси Oy – значение частоты, по Ox – позиция в рейтенге частот.
 
-Лингвист из Гарварда Джордж Кинсли Ципф определил распределение слов в естественном языке с помощью дискретного экспоненциального распределения, окторое назвали распределением Ципфа. Закон Ципфа утверждает, что в обычном документе на естественном языкечастота любого слова обратнопропорциональна его месту в таблице частот. Строя кривую распределения Ципфа в масштабе log-log, получаем прямую линию с уклоном около -1 (см. Рис. 2.)
+Лингвист из Гарварда Джордж Кинсли Ципф определил распределение слов в естественном языке с помощью дискретного экспоненциального распределения, окторое назвали распределением Ципфа. Закон Ципфа утверждает, что в обычном документе на естественном языкечастота любого слова обратнопропорциональна его месту в таблице частот. Строя кривую распределения Ципфа в масштабе log-log, получаем прямую линию с уклоном около -1 (см. Рис. 2)
 Самый простой вывод из закона Ципфа состоит в том, что в небольших документов ключевые идеи описываются малым числом слов. Есть множество примеров текстов, смысл которых можно лаконично передеть несколькими словами.
 
 ###3.3 Примеры задач, решаемых при помощи модели векторного пространства
@@ -83,36 +83,34 @@ genetically|said|safety|engineered|study|test|great|deal|controversy|foods
 ![](Figures/figure_4.png)
 **Рис.4.** Облако тегов, созданное при помощи сервиса tagCrowd.com. Размер шрифта и насыщенность цвета прямопропорциональны частоте слова в документе.
 
-###Word Clouds
-Word clouds (Figure 10.4), also known as text clouds or tag clouds, are layouts of raw tokens, colored and sized by their frequency within a single document. Text clouds and their variations, such as a Wordle (Figure 10.5), are examples of visualizations that use only term frequency vectors and some layout algorithm to create the visualization.
+### 4.1 Облако из слов (Word Cloud)
+Облака слов (Рис. 4), также известные, как облака тегов – это специальным образом расположенные линии из токенов. Цвет и размер отражает частоту встречаемости токена в документе. Такие облака и их вариации, такие как Wordle (Рис. 5) – примеры визуализаций, которые используют только частотныые вектора и определенные алгоритм размещения для создания визуализации.
 
 ![](Figures/figure_5.png)
-**Рис.5.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.5.** Пример облачной визуализации, созданной при помощи сервиса wordle.net. Размер текста соответствует частоте слова в документе.
 
-###WordTree
-The WordTree visualization [450] is a visual representation of both term frequencies, as well as their context (Figure 10.6). Size is used to represent the term or phrase frequency. The root of the tree is a user-specified word or phrase of interest, and the branches represent the various contexts in which the word or phrase is used in the document.
+### 4.2 Словесное дерево (WordTree)
+Словесное дерево – способ визуализации частот, а также контекста (Рис. 6). Размер используется для отображеня частоты встречаемости терма или фразы. Корень дерева определяется пользователем и является словом или фразой, которая представляет наибольший интерес, а ветки представляют собой различные вариации контекстов, в которых используется данное слово или фраза.
 
 ![](Figures/figure_6.png)
-**Рис.6.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.6.** Визуализация словесного дерева, созданная при помощи сервиса ManyEyes. Ветки дерева представляют собой различные вариации контекстов, в которых используется слово или фраза, находящаяся в корне.
 
-###TextArc
-
-We can extend the representation of word distribution by displaying con- nectivity. There are several ways in which connections can be computed. TextArc [312] is a visual representation of how terms relate to the lines of text in which they appear (Figure 10.7). Every word of the text is drawn in order around an ellipse as small lines with a slight offset at its start. As in a text cloud, more frequently occurring words are drawn larger and brighter. Words with higher frequencies are drawn within the ellipse, pulled by its oc- currences on the circle (similar to RadViz). The user is able to highlight the underlying text with probing and animate “reading” the text by visualizing the flow of the text through relevant connected terms.
+### 4.3 Текстовая арка (TextArc)
+Можно расширить представление распределения слов при помощи отображения связей между ними. Есть несколько способов, которые позволяют рассчитать эти связи. Текстовая арка – визуальное отображение того, как термы отнозятся к строкам текста, в которых они встречаются (Рис. 7). Каждое слово из текста рисуется по порядку вокруг эллипса в виде тонких диний с небольшим отступом от начала. Также, как и в облаке тегов наимболее часто встречаемые слова рисуются крупнее и ярче, Слова с наибольшими частотами помещаются внутрь эллипса. Пользователь может подсветить текст и проанимировать "чтение" текста, последовательно подсвечивая слова, встречающиеся в тексте.
 
 ![](Figures/figure_7.png)
-**Рис.7.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.7.** Визаулизация в виде текстовой арки полного текста "Алисы в стране Чудес".
 
-###Arc Diagrams
+### 4.4 Диаграммы в виде арки (Arc diagrams)
 
-Arc diagrams [451] are a visualization focused on displaying repetition in text or any sequence. Repeated subsequences are identified and connected by semicircular arcs. The thickness of the arcs represents the length of the subsequence, and the height of the arcs represents the distance between the subsequences. Figure 10.8 displays Bach’s Minuet in G Major, visualizing
+Диаграммы в виде арок  – отображают повторяющиеся последовательности в тексте. 
+Повторяющиеся подпоследовательности соединены полукруглыми арками. Толщина арки показывает длину подпоследовательности, а высота арки – расстояние между последовательностями. На Рис. 8 отображен Минуэт Соль-мажор Баха – классический пример минуэта. Он состоит из двух основных частей. Пересечение двух основных арок показывает, что конец первой части содержится в начале второй.
 
 ![](Figures/figure_8.png)
-**Рис.8.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.8.** Диаграмма в виде арок, визуализирующая Минуэт Соль-мажор Баха.
 
-the classic pattern of a minuet. It contains two parts, each consisting of a long passage played twice. The parts are loosely related, as shown by the bundle of thin arcs connecting the two main parts. The overlap of the two main arcs shows that the end of the first passage is the same as the beginning of the second.
-
-###Literature Fingerprinting
-Literature fingerprinting is a method of visualizing features used to char- acterize text [222]. Instead of calculating just one feature value or vector for the whole text (this is what is usually done), we calculate a sequence of feature values per text and present them to the user as a characteristic fingerprint of the document. This allows the user to “look inside” the docu- ment and analyze the development of the values across the text. Moreover, the structural information of the document is used to visualize the docu- ment on different levels of resolution. Literature fingerprinting was applied to an authorship attribution problem to show the discrimination power of the standard measures that are assumed to capture the writing style of an author (see Figure 10.9).
+### 4.5 Литературный отпечаток (Literature fingerprinting)
+Литературный отпечаток – метод визуализации признаков, который используется для получения характеристике текста. Всесто того, чтобы считать вектор только для одного признака, мы считаем последователность признаков в тексте и показываем их пользователю, как характеристические "отпечатки" документа. Это позволяет пользователю "заглянуть" в документ и проанализировать значения. Более того, структурная информация, полученная из документа используется для визуализации документа на разных уровнях. Литературный отпечаток был применен для демонстрации несостоятельности стандартных подходов к анализу авторства и стиля произведения (см. Рис. 9).
 
 ##5. Document Collection Visualizations
 In most cases of document collection visualizations, the goal is to place sim- ilar documents close to each other and dissimilar ones far apart. This is a minimax problem and typically O(n2). We compute the similarity between all pairs of documents and determine a layout. The common approaches are graph spring layouts, multidimensional scaling, clustering (k-means, hierar- chical, expectation maximization (EM), support vector), and self-organizing maps. We present several document collection visualizations, such as self- organizing maps, cluster maps, and themescapes.
