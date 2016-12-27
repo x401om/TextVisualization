@@ -115,7 +115,7 @@ genetically|said|safety|engineered|study|test|great|deal|controversy|foods
 ![](Figures/figure_9.png)
 **Рис.9.** Техника Литературного отпечатка
 
-##5. Визуалтзация коллекции докумунтов
+##5. Визуализация коллекции докумунтов
 В большинстве задач по визуализации массива документов требуется разместить похожие документы максимально близко друг к другу, а отличающиеся – достаточно далеко. Это есть задача на Минимакс, обычно ее решение занимает O(n2). Суть в том, что мы рассчитываем сходство между всми частями документов и располагаем их определенным образом в пространстве (на плоскости). Наиболее распространеннымм способами отображения являются графы, многомерное масштабирование, кластеризация, самоорганизующиеся карты (self-organizing maps), карты кластеров и тематические пейзажи (themescapes);
 
 ### 5.1. Самоорганизующиеся карты (Self-Organizing Maps)
@@ -137,50 +137,52 @@ genetically|said|safety|engineered|study|test|great|deal|controversy|foods
 ![](Figures/figure_12.png)
 **Рис.12.** Карточки документов
 
-##6. Extended Text Visualizations
-Here we investigate several text visualization techniques that involve meta- data or otherwise go beyond the typical term-vector-based visualizations.
-###Software Visualization
-Eick et al. developed a visualization tool called SeeSoft [108] that visualizes statistics for each line of code (i.e., age and number of modifications, pro- grammer, dates). In Figure 10.13, each column represents a source code file with the height representing the size of the file. If the file is longer than the screen, it continues into the next column. In the classic SeeSoft repre- sentation, each row represents one line of code. Since the number of lines is too large for one row, each line of code is represented by a pixel in the row. This increases the number of lines that can be displayed. Color is used to represent the call count. The more red a line is, the more often the line is called, and thus is a key hot-spot. A blue line is an infrequently called one. Color can be used to represent other parameters, such as time of last modification or number of modifications. With a 1K × 1K screen, SeeSoft is able to display up to 50,000 lines of code. This figure contains 52 files with 15,255 lines of code. The selected file is file1.c, a block of code with a zoomed-in view of line 408.
+##6. Расширенная визуализация текстов
+Далее рассмотрим несколько способов визуализации тектовых данных, которые используют мета-данные или иначе говоря, идут чуть дальше, чем обычные способы, основанные на векторах.
+
+### 6.1. Визуализация ПО (Software Visualization)
+Eick et al. разработал инструмент визуализации под названием SeeSoft, который позволяет отображать статистику для каждой строки кода (например, возраст и количество модификаций, программиста, даты). На Рис. 13 каждая колонка представляет собой файл исходного кода, высота колонки отражает размер файла. Если файл длиннее экрана, то колонка переходит в следующую. В классическом варианте SeeSoft отобраажает каждую строку кода в линию. Как только количество строк становится так велико, что уже не влезает в строку, каждая строка отображается как пиксель. Таким образом можно отобразить достаточно большое число строк. Цвет используется для отражения числа вызовов. Чем чаще строка кода вызывается, тем краснее ее цвет. Голубые линии – редко вызываемые; Цвет может быть использован и для отражения других параметров, таких как время последнего изменения. Испульзуя область с разрешением 1000х1000 SeeSoft отображает до 50 000 строк кода. Этот рисунок содержит визуализацию 52 файлов и 15 255 строк кода. Выбранный файл file1.c - увеличенный вариант.
 
 ![](Figures/figure_13.png)
 **Рис.13.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
 
-###Search Result Visualization
-Marti Hearst developed a simple query result visualization foundationally similar to Keim’s pixel displays [232] called TileBars [178], which displays a number of term-related statistics, including frequency and distribution of terms, length of document, term-based ranking, and strength of ranking. Each document of the result set is represented by a rectangle, where width indicates relative length of the document and stacked squares correspond to text segments (see Figure 10.14). Each row of the stack represents a set of query terms, and the darkness of the square indicates the frequency of terms among the corresponding terms. Titles and the first words from
+### 6.2. Визуализация результатов поискового запроса
+Марти Херст (Marti Hearst) разработал очень удобный и простой способ визуализации поисковых запросов. Он очень похож на пиксельное отображение Кейма (Keim), которое называется TileBars. Оно отображает статсистики по термам, включая частоты и распределения, длины документов и др. Каждый документ отображается в в виде прямоугольника, где ширина означает относительную длину документа, а сложенные прямоугольники относятся к сегментам текста (см. Рис.14).
+Каждый боьлшой прямоугольник означает документ, каждый квадратик внутри прямоугольника - отрывок текста. Каждая строка стопки отражает набор запрошенных термов, а степень закрашенности квадратика - частоту встречаемости терма.
 
 ![](Figures/figure_14.png)
-**Рис.14.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.14.** Визуализация исходного исходного кода при помощи SeeSoft.
 
-###Temporal Document Collection Visualizations
-ThemeRiver [173], also called a stream graph, is a visualization of thematic changes in a document collection over time (Figure 10.15). This visualiza-
+### 6.3. Визуализация изменяющихся коллекций документов
+Река Времени (TimeRiver), также называемая потоковым графом – способ визуализировать изменения тематик внутри корпуса с течением времени (Рис.15). Предполагается, что документы корпуса меняются с течением времени. Визуально тематики отображены в виде горизонтально ориентированных лент, толщина которых в определенном месте означает встречаемость темы в определенный момент времени. 
 
 ![](Figures/figure_15.png)
-**Рис.15.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.15.** TimeRiver
 
-tion assumes that the input data progresses over time. Themes are visually represented as colored horizontal bands whose vertical thickness at a given horizontal location represents their frequency at a particular point in time.Jigsaw is a tool for visualizing and exploring text corpora [155]. Jigsaw’s calendar view positions document objects on a calendar based on date en- tities identified within the text. When the user highlights a document, the entities that occur within that document are displayed (see Figure 10.16).Wanner et al. developed a visual analytics tool for conducting semi- automatic sentiment analysis of large news feeds [440]. While the tool au- tomatically retrieves and analyzes RSS feeds with respect to positive and
+*Jigsaw* – инструмент для визуализации и анализа текстовых корпусов. Календарь Jigsaw располагает документы на плоскости на основе того, когда определенные сущности появились в тексте. Когда пользователь выбирает документ, отображаются сущности, встречающиеся в этом документе. (Рис.16)
 
 ![](Figures/figure_16.png)
-**Рис.16.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.16.** Jigwaw Calendar View
 
-negative opinion words, the more demanding news analysis of finding trends, spotting peculiarities, and putting events into context is left to the human expert. As shown in Figure 10.17, each single news item is represented by one visual object and plotted on a horizontal time axis according to its publication time. The shape and color of an item reveal information about the category it belongs to, and its vertical shift indicates whether it has a positive connotation (upward shift) or a negative one (downward shift)
+### 6.4. Отображение связей
 
-###Representing Relationships
-
-Jigsaw [155] also includes an entity graph view (Figure 10.18), in which the user can navigate a graph of related entities and documents. In Jigsaw, entities are connected to the documents in which they appear. The Jigsaw graph view does not show the entire document collection, but it allows the user to incrementally expand the graph by selecting documents and entities of interest (see Figure 10.19).
+Jigsaw также включаетс в себя и возможность отображения сущностей в виде графа (Рис. 18), с помощью которого пользователь имеет возможность исследовать связонные сущности из документов. Такой инструмент не отображает всю коллекцию документов целиком, но он позволяет итеративно выбирать нужные документы и исследовать корпус (Рис. 19).
 
 ![](Figures/figure_17.png)
-**Рис.17.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
-![](Figures/figure_18.png)
-**Рис.18.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
-![](Figures/figure_19.png)
-**Рис.19.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
-The Jigsaw list view is an alternative to the graph view in that it allows the user to explore relationships between various entity types and documents. As shown in Figure 10.20, when the user selects items of interest, the list view draws connection lines showing their relationships.
+**Рис.17.** Визуализация сентимент-анализа.
 
-##7. Заключение
-In this chapter we have explored the fundamental computational approaches to transforming unstructured text into structured data suitable for visualiza- tion and analysis. We introduced visualizations such as text clouds and word trees for finding themes and patterns within single documents. Visualiza- tions such as SOMs, map displays, and themescapes are useful for visualizing document collections. For further analysis of document collections with com- plex relationships and temporal characteristics, we briefly surveyed several visualizations, such as node graphs, ThemeRiver, and Calendar View.
+![](Figures/figure_18.png)
+**Рис.18.** Jigsaw graph view – показывает связи между документами.
+
+![](Figures/figure_19.png)
+**Рис.19.** Кластеризация документов
+
+The Jigsaw list view – альтернативный графу способ представлени документов, который позволяет пользователю исследовать связи между различными типами сущностей. На Рис.20 показан пример того, как пользователь может изучать интересующие его объекты.
 
 ![](Figures/figure_20.png)
-**Рис.20.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
-##8. Что почитать
-A wonderful collection of papers originating from a meeting in 2005 to dis- cuss the state of the art in visual information processing and describing integrating text analysis and visualization can be found in the book Visual Data Mining: Theory, Techniques and Tools for Visual Analytics, edited by Simoff, Bohlen, and Mazeika [379]. More details on text mining and analysis can be found in Feldman and Sanger’s book, The Text Mining Handbook: Ad- vanced Approaches in Analyzing Unstructured Data [122]. The book covers the full knowledge-discovery pipeline including visualization. Marti Hearst has a great book entitled Search User Interfaces [179] , which includes a very relevant chapter on information visualization for text analysis; the book is also available on line at http://searchuserinterfaces.com/book/.
+**Рис.20.** Jigsaw list view, показывающий связи между людьми (слева), местами (в центре) и организациями (справа).
+
+##7. Заключение
+В данной статье мы рассмотрели фундаментальные подходы к обработке неструктурированных текстовых данных в структурные данные, пригодные для визуализации и дальнейшего анализа. Мы показали визуальзацию в виде облака слов, словесных деревьев и и способы выявления тематик конкретного документа. Такие способы визуализации, как самоорганизующиеся карты, карты отображения и тематические пейзажи очень полезны для визуализации коллекции документов в целом. Для глубокого анализа корпуса со сложными связями и временными характеристиками мы кратко рассмотрели некоторые способы визуализации, такие как графы, ThemeRiver и календарь.
+
 

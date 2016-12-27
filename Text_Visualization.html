@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>README</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Визуализация текстов и документов</h1>
+
+<p>В наше время мы имеем огромное количество источников информации: от библиотек до электронной почты, а также различных веб-приложений.
+Визуализация – отличный способ проанализировать подобную информацию. При помощи различных подходов мы можем визуализуализировать такие вещи, как блог, вики-страницы, лента в Твиттере, миллиарды слов, набор бумаг или электронную библиотеку. Так как способ визуализации данных зависит от задачи, которую мы решаем, нам необходимо понимать, какая именно информация нам потребуется при работе с текстом, документами или некоторыми интернет-сущностями. Наиболее очивидной задачей, сопряженной с анализом тектов и документов, очивидно, является поиск слова, фразы или темы. В слабо структурированных данных мы моглибы искать связи между словами, фразами, темами или документами. Для структорированных массивов тектов или документов основной задачей часто является поиск паттернов и выбросов.
+В этой статье мы обратим внимание на задачи, связанные с текстами и на различные подходы их визуализации с целью проведения определенного визуального анализа.</p>
+
+<h2 id="toc_1">1. Введение</h2>
+
+<p>Определим [множественный] <strong>корпус</strong>, как некоторый набор (коллекция) документов. Мы взаимодействуем с объектами этого корпуса. Такими объектами могут быть слова, предложения, абзацы, цельные документы. Также мы можем рассматривать иллюстрации и видео. Чаще всего эти объекты рассматриваются поотдельности, в зависимости от типа задачи. Тексты и документы часто минимально структурированны и могут содержать определенные атрибуты, метаданные, особенно если эти тексты относятся к какой-то специфической предметной области. К примеру, документы имеют формат и часто включаютс в себя информацию об этом документе (автор, дата создания, дата изменения, комментарии, размер и др.). Для того, чтобы делать запросы к корпусу используются специальные системы извлечения информации, которые позволяют понять, насколько каждый из документов релевантен запросу. Для этого необходимо производить некоторые предварительные вычисления, а также интерпретировать семантику текстов.</p>
+
+<p>Также мы имеем возможность подсчитывать статистики по документам. Например, число слов в абзацах или распределение слов по частотам, относительно авторов текстов. Есть ли в тексте какие-то абзацы, в которых повторяется одно и то же слово или предложение? Также мы имеем возможность строить связи между абзацами документов внутри корпуса. Например кто-то спросит: &quot;В каких документах говорится о распространении гриппа?&quot;. Это не самый простой запрос – это не просто взять и поискать слова &quot;грипп&quot;. Почему? Далее можно искать естественные связи или отношения между различными документами. Какие кластеры тут наблюдаются? Являются ли эти кластеры темами? Похожесть может быть определена в терминах цитирования, обзего авторства, тематики и т.д.</p>
+
+<h2 id="toc_2">2. Уровни представления текстов</h2>
+
+<p>Выделим три уровня представления текстов: лексический, синтаксический и семантический. Каждый из них требует от нас конвертации неструктурированных тектов в некоторую форму структурированных данных.</p>
+
+<ul>
+<li><strong>Лексический уровень.</strong> Лексический уровень основан на преобразовании наборов символов (строк) в последовательность атомарных сущностей, называемых <strong>токенами</strong>. Лексический анализаторы преобразуют входную последовательность символов по данным наборам правил в новые последовательности токенов, которые могут быть использованы в дальнейшем анализе. Токены мокут в ключать в себя символы. n-граммы, слова, основы слов, лесемы, фразы или словесные n-грамы, все с присущими им атрибутами. Много правил может быть использовано для извленчения токенов, наиболее распростронееым из них является конечный автомат, определенные некоторым регулярным выражением.</li>
+<li><strong>Синтаксический уровень.</strong> Синтаксический уровень определяет и теггирует (аннотирует) функцию каждого токена. Мы присваиваем различные теги, такие как позиция в предложении или является ли слово существительным, прилагательным, бранным словом, модификатором или союзом. Токен также может иметь атрибуты, которые говорят о том, стоит ли он в единственном числе, а таеже определяют близость токена к другим токенам. Расширенные теги могут определять дату, валюту, место, персоналию, орагизацию и время. (Рис. 3) Процесс извдечения подобных аннотаций называется Распознованием Именнованных Сущностей (named entity recognition – NER). Богатство и разнообразие лингвистических моделей ведет к широкому разнообразию подходов.</li>
+<li><strong>Семантический уровень.</strong> Семантический уровень включает в себя извлечение смысла и связей между знаниями, полученными на этапе определения структуры на синтаксическом уровне. Цель этого уровня – опрпделить аналитическую интерпретацию текста целиком в рамках определенного контекста или даже вне зависимости от контекста.</li>
+</ul>
+
+<h2 id="toc_3">3. Модель векторного пространства</h2>
+
+<p>Для различных техник визуализации и анализа документов и корпусов вычисление векторов теромов является важнейшим шагом. В модели векторного пространства <strong>вектор термов</strong> интересующего нас объекта (абзаца, документа или целого набора документов) – это вектор, в котором каждая координата отрадает вес данного слова в конкретном документе. Обычно для очистки от шумов учитываются и фильтруются стоп-слова (такие, как &quot;the&quot; и &quot;a&quot;), а также слова, у которых происходит склеивание основы.
+Приведенный ниже псевдокод подсчитывает появления уникальных токенов за исключением стоп-слов. Подразумевается, что на взод подается поток токенов, сгенерированных лексическим анализатором для единиченого докумета. В переменной term лежит хэш-таблица, которая хранит для каждоко терма число его появления в документе.</p>
+
+<div><pre><code class="language-none">COUNT-TERMS(tokenStream)
+1 terms ← ∅ // инициализируем terms пустой хэш-таблицкй.
+initialize terms to an empty hashtable. 
+2 for each token t in tokenStream
+3   do if tisnotastopword
+4       do increment (or initialize to 1) terms[t]
+5 return terms</code></pre></div>
+
+<p>Можем применить этот псевдокод к следующему тексту:</p>
+
+<div><pre><code class="language-none">There is a great deal of controversy about the safety of genetically engineered foods. Advocates of biotechnology often say that the risks are overblown.
+&quot;There have been 25,000 trials of genetically modified crops in the world, now, and not a single incident, or anything dangerous in these releases,&quot; said a spokesman for Adventa Holdings, a UK biotech firm. During the 2000 presidential campaign, then-candidate George W. Bush said that &quot;study after study has shown no evidence of danger.&quot; And Clinton Administration Agriculture Secretary Dan Glickman said that &quot;test after rigorous scientific test&quot; had proven the safety of genetically engineered products.</code></pre></div>
+
+<p>Абзац содержит 98 токенов, 74 терма и 48 термов после удаления стоп-слов.
+В таблицы показаны результаты работы псевдокода:</p>
+
+<table>
+<thead>
+<tr>
+<th>genetically</th>
+<th>said</th>
+<th>safety</th>
+<th>engineered</th>
+<th>study</th>
+<th>test</th>
+<th>great</th>
+<th>deal</th>
+<th>controversy</th>
+<th>foods</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_4">3.1. Подсчет весов</h3>
+
+<p>Эта модель векторного пространства требует наличия у термов документа определенных весов. Существует множество методов для подсчета весов, наиболее известным из которыз яляется frequency inverse document frequency (tf-idf). Пусть <em>Tf(w)</em> - частота терма или количество раз, которые слово w встретилось в документе. Пусть также <em>Df(w)</em> – количество документов, содержащих данное слово. Также пусть <em>N</em> - число документов. Тогда определим <em>TfIdf(w)</em> как </p>
+
+<p><img src="Figures/tf_idf.png" alt=""></p>
+
+<p>По сути, это есть относительная важность слова в документе, что отражет нашу интуитивное понимание важности слова. Слово тем более важно, чем в меньшем количестве документов оно встречается (наименьшее <em>Df</em>), а также, если оно  встречается в определенном документе несколько раз (наибольшее <em>Tf</em>). Говоря иначе, мы нам наиболее интересны слова, которые часто встречаются в каком-то конкретном документе, но при этом редко во всем корпусе в целом. Такие слова интуитивно болле важны, так как при помощи них можно разделять и классифицировать документы. На рис.1 показаны вектора термов для группы документов с использованием <em>tf-idf</em> весов.</p>
+
+<p><img src="Figures/figure_1.png" alt="">
+<strong>Рис.1.</strong> Иллюстрация векторов термов для множества документов, содержащие значения <em>tf-idf</em></p>
+
+<p>Следующий псевдокод вычисляет <em>tf-idf</em> вектора для каждого документа в данной коллекции документов. Он использует функцию Count-Terms в предыдущем примере. Первая секция итерируется по всем документам, вычисляя и сохраняя Tf и Df. Во второй секции происходит вычисление <em>tf-idf</em> векторов для каждого документа и сохранение в таблицу.</p>
+
+<div><pre><code class="language-none">Compute-TfIdf(documents)
+1 termFrequencies ← ∅ // Ищем частоты
+2 documentFrequencies ← ∅ // Подсчитываем документы, в которых терм был встречен
+3 uniqueTerms ← ∅ // Список всех уникальных термов
+4 for each document d in documents
+5       do docName ← Name(d) // Извлекаем имя документа
+6       tokenStream ← Tokenize(d) // Генерируем поток токенов документа
+7       terms ← Count-Terms(tokenStream) // Подчитываем Tf
+8       termFrequencies[docName] ← terms // Сохраняем Tf
+9       for each term t in Keys(terms)
+10          do increment (or initialize to 1) documentFrequencies[t]
+11          uniqueTerms ← uniqueTerms ∪ t
+12
+13 tfIdfVectorTable ← ∅ // Подсчитывает tf-idf
+14 n ← Length(documents)
+15 for each document name docName in Keys(termFrequencies)
+16      do tfIdfVector ← create zeroed array of length Length(uniqueTerms)  
+17          terms ← termFrequencies[docName]
+18          for each term t in keys(terms)
+19              do tf ← terms[t]
+20                  df ← documentFrequencies[t]
+21                  tfIdf ← tf ∗ log(n/df)
+22                  tfIdfVector[index of t in uniqueTerms] ← tfIdf
+23          tfIdfVectorTable[docName] ← tfIdfVector
+24  return tfIdfVectorTable</code></pre></div>
+
+<h3 id="toc_5">3.2. Закон Ципфа</h3>
+
+<p>Мы лучше всего знакомы с нормальным и равномерным распределениями. Когда мы работаем с большими объемами данных, очень часто сталкиваемся с экспоненциальным распределением, которое отражает феномен масштаба. Экономист В. Парето утверждал, что выручка компании обратнопропорционально его экспоненциальному распределению – классическому закону 80-20, который определяет, что 20% населения обладает 80% богатств.</p>
+
+<p><img src="Figures/figure_2.png" alt="">
+<strong>Рис.2.</strong> Распределение термов в Википедии, наглядный пример закона Ципфа. По оси Oy – значение частоты, по Ox – позиция в рейтенге частот.</p>
+
+<p>Лингвист из Гарварда Джордж Кинсли Ципф определил распределение слов в естественном языке с помощью дискретного экспоненциального распределения, окторое назвали распределением Ципфа. Закон Ципфа утверждает, что в обычном документе на естественном языкечастота любого слова обратнопропорциональна его месту в таблице частот. Строя кривую распределения Ципфа в масштабе log-log, получаем прямую линию с уклоном около -1 (см. Рис. 2)
+Самый простой вывод из закона Ципфа состоит в том, что в небольших документов ключевые идеи описываются малым числом слов. Есть множество примеров текстов, смысл которых можно лаконично передеть несколькими словами.</p>
+
+<h3 id="toc_6">3.3 Примеры задач, решаемых при помощи модели векторного пространства</h3>
+
+<p>Модель векторного пространства в связке с некоторыми метриками расстояния позволяет решить много полезных задач. Мы можем использовать tf-idf и модель векторного пространства для поиска документов, отвечающих нашим интересам.</p>
+
+<p><img src="Figures/figure_3.png" alt="">
+<strong>Рис.3.</strong> Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.</p>
+
+<p>Например, модель вкупе с некоторыми метриками расстояния позволяет нам отвечть на такие вопросы, как &quot;похож ли этот документ на тот&quot;, &quot;какие документы наиболее релевантны поисковому запросу&quot; – все пр ипрмощи нахождения документов, векторы термов которых наиболее похоже на вектор входного документа, среднего вектора коллкеции или вектору поискового запроса.</p>
+
+<p>Другой косвенной задачей может стать помощь пользователю понять весь корпус. Пользователь может искать паттерны или структуры, такие как основные тематики или кластеры, а таеже распределение тем по коллекции документов. Часто это включает в себя визуализаию корпуса на плоскости или отображение графа связей между документами или сущностями. В целом визуализация выглядит примерно так: мы получаем данные (корпус), превращаем его в набор векторов, затем запускаем алгоритм, который будет решать нужную задачу (например, кластеризация или поиск схожих текстов), а затем генерируем какую-то визуальную картину.</p>
+
+<h2 id="toc_7">4. Визуализация отдельных документов</h2>
+
+<p>Здесь мы покажем несколько способов визуализации единичного тектового документа, взятых с VAST Contest 2007.</p>
+
+<p><img src="Figures/figure_4.png" alt="">
+<strong>Рис.4.</strong> Облако тегов, созданное при помощи сервиса tagCrowd.com. Размер шрифта и насыщенность цвета прямопропорциональны частоте слова в документе.</p>
+
+<h3 id="toc_8">4.1 Облако из слов (Word Cloud)</h3>
+
+<p>Облака слов (Рис. 4), также известные, как облака тегов – это специальным образом расположенные линии из токенов. Цвет и размер отражает частоту встречаемости токена в документе. Такие облака и их вариации, такие как Wordle (Рис. 5) – примеры визуализаций, которые используют только частотныые вектора и определенные алгоритм размещения для создания визуализации.</p>
+
+<p><img src="Figures/figure_5.png" alt="">
+<strong>Рис.5.</strong> Пример облачной визуализации, созданной при помощи сервиса wordle.net. Размер текста соответствует частоте слова в документе.</p>
+
+<h3 id="toc_9">4.2 Словесное дерево (WordTree)</h3>
+
+<p>Словесное дерево – способ визуализации частот, а также контекста (Рис. 6). Размер используется для отображеня частоты встречаемости терма или фразы. Корень дерева определяется пользователем и является словом или фразой, которая представляет наибольший интерес, а ветки представляют собой различные вариации контекстов, в которых используется данное слово или фраза.</p>
+
+<p><img src="Figures/figure_6.png" alt="">
+<strong>Рис.6.</strong> Визуализация словесного дерева, созданная при помощи сервиса ManyEyes. Ветки дерева представляют собой различные вариации контекстов, в которых используется слово или фраза, находящаяся в корне.</p>
+
+<h3 id="toc_10">4.3 Текстовая арка (TextArc)</h3>
+
+<p>Можно расширить представление распределения слов при помощи отображения связей между ними. Есть несколько способов, которые позволяют рассчитать эти связи. Текстовая арка – визуальное отображение того, как термы отнозятся к строкам текста, в которых они встречаются (Рис. 7). Каждое слово из текста рисуется по порядку вокруг эллипса в виде тонких диний с небольшим отступом от начала. Также, как и в облаке тегов наимболее часто встречаемые слова рисуются крупнее и ярче, Слова с наибольшими частотами помещаются внутрь эллипса. Пользователь может подсветить текст и проанимировать &quot;чтение&quot; текста, последовательно подсвечивая слова, встречающиеся в тексте.</p>
+
+<p><img src="Figures/figure_7.png" alt="">
+<strong>Рис.7.</strong> Визаулизация в виде текстовой арки полного текста &quot;Алисы в стране Чудес&quot;.</p>
+
+<h3 id="toc_11">4.4 Диаграммы в виде арки (Arc diagrams)</h3>
+
+<p>Диаграммы в виде арок  – отображают повторяющиеся последовательности в тексте. 
+Повторяющиеся подпоследовательности соединены полукруглыми арками. Толщина арки показывает длину подпоследовательности, а высота арки – расстояние между последовательностями. На Рис. 8 отображен Минуэт Соль-мажор Баха – классический пример минуэта. Он состоит из двух основных частей. Пересечение двух основных арок показывает, что конец первой части содержится в начале второй.</p>
+
+<p><img src="Figures/figure_8.png" alt="">
+<strong>Рис.8.</strong> Диаграмма в виде арок, визуализирующая Минуэт Соль-мажор Баха.</p>
+
+<h3 id="toc_12">4.5 Литературный отпечаток (Literature fingerprinting)</h3>
+
+<p>Литературный отпечаток – метод визуализации признаков, который используется для получения характеристике текста. Всесто того, чтобы считать вектор только для одного признака, мы считаем последователность признаков в тексте и показываем их пользователю, как характеристические &quot;отпечатки&quot; документа. Это позволяет пользователю &quot;заглянуть&quot; в документ и проанализировать значения. Более того, структурная информация, полученная из документа используется для визуализации документа на разных уровнях. Литературный отпечаток был применен для демонстрации несостоятельности стандартных подходов к анализу авторства и стиля произведения (см. Рис. 9).</p>
+
+<p><img src="Figures/figure_9.png" alt="">
+<strong>Рис.9.</strong> Техника Литературного отпечатка</p>
+
+<h2 id="toc_13">5. Визуализация коллекции докумунтов</h2>
+
+<p>В большинстве задач по визуализации массива документов требуется разместить похожие документы максимально близко друг к другу, а отличающиеся – достаточно далеко. Это есть задача на Минимакс, обычно ее решение занимает O(n2). Суть в том, что мы рассчитываем сходство между всми частями документов и располагаем их определенным образом в пространстве (на плоскости). Наиболее распространеннымм способами отображения являются графы, многомерное масштабирование, кластеризация, самоорганизующиеся карты (self-organizing maps), карты кластеров и тематические пейзажи (themescapes);</p>
+
+<h3 id="toc_14">5.1. Самоорганизующиеся карты (Self-Organizing Maps)</h3>
+
+<p>Самоорганизующиеся карты – алгоритм машинного обучения без учителя, который использует 2D-ноды, в которых находятся документы. Каждая нода связана с вектором той же размерности, что и входной вектор (векторы документов), эти векторы нод испотльзубтся для обучения. Обычно эти ноды инициализируются со случайными весами. Мы выбираем соучайный вектор из входных векторов и рассчитываем расстояние до каждой ноды. Далее мы выбираем наиболее близкую ноду (с наименьшим радиусом) и подгоняем ее веса делая их наиболее похожими на входной вектор. Итерируясь по входным векторам мы делаем радиусы меньше. Пример использования этого подхода показан на Рис. 10. На нем изображен миллион документов, распределенный по 83 новостным группам.</p>
+
+<p><img src="Figures/figure_10.png" alt="">
+<strong>Рис.10.</strong> Пример использования самоорганизующейся карты на основе финских новостных брошюр. </p>
+
+<h3 id="toc_15">5.2. Тематические пейзажи (Themescapes)</h3>
+
+<p>Тематические пейзажи – по сути резюме всего корпуса, выглядит как 3D-пейзаж, в котором высоты и цвета используются для передачи полотности похожих документов. На примере, приведенном на Рис. 11 из Pacific Northwest National Labs показаны новостные статьи в виде тематического пейзажа. Высокие &quot;горы&quot; представляют собой популярные темы корпуса (высота пропорциональна числу документов на эту тему)</p>
+
+<p><img src="Figures/figure_11.png" alt="">
+<strong>Рис.11.</strong> Пример тематического пейзажа.</p>
+
+<h3 id="toc_16">5.3. Карточки документов (Document Cards)</h3>
+
+<p>Карточки документов – это способ компактной визаулизации (Рис. 12), который позволяет отразить ключевые семантические признаки документов в виде набора картинок и важных ключевых терминов.
+Изображения и их заголовки извлекаются при помощи графических эвристик, также заголовки используются в поусемантическом взвешивании изображений. К тому же, цветовая гистограмма изображения используется для классификации изображениям (фотография/график/набросок/таблицы). После чего полученные классы испотзуются для отображения.</p>
+
+<p><img src="Figures/figure_12.png" alt="">
+<strong>Рис.12.</strong> Карточки документов</p>
+
+<h2 id="toc_17">6. Расширенная визуализация текстов</h2>
+
+<p>Далее рассмотрим несколько способов визуализации тектовых данных, которые используют мета-данные или иначе говоря, идут чуть дальше, чем обычные способы, основанные на векторах.</p>
+
+<h3 id="toc_18">6.1. Визуализация ПО (Software Visualization)</h3>
+
+<p>Eick et al. разработал инструмент визуализации под названием SeeSoft, который позволяет отображать статистику для каждой строки кода (например, возраст и количество модификаций, программиста, даты). На Рис. 13 каждая колонка представляет собой файл исходного кода, высота колонки отражает размер файла. Если файл длиннее экрана, то колонка переходит в следующую. В классическом варианте SeeSoft отобраажает каждую строку кода в линию. Как только количество строк становится так велико, что уже не влезает в строку, каждая строка отображается как пиксель. Таким образом можно отобразить достаточно большое число строк. Цвет используется для отражения числа вызовов. Чем чаще строка кода вызывается, тем краснее ее цвет. Голубые линии – редко вызываемые; Цвет может быть использован и для отражения других параметров, таких как время последнего изменения. Испульзуя область с разрешением 1000х1000 SeeSoft отображает до 50 000 строк кода. Этот рисунок содержит визуализацию 52 файлов и 15 255 строк кода. Выбранный файл file1.c - увеличенный вариант.</p>
+
+<p><img src="Figures/figure_13.png" alt="">
+<strong>Рис.13.</strong> Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.</p>
+
+<h3 id="toc_19">6.2. Визуализация результатов поискового запроса</h3>
+
+<p>Марти Херст (Marti Hearst) разработал очень удобный и простой способ визуализации поисковых запросов. Он очень похож на пиксельное отображение Кейма (Keim), которое называется TileBars. Оно отображает статсистики по термам, включая частоты и распределения, длины документов и др. Каждый документ отображается в в виде прямоугольника, где ширина означает относительную длину документа, а сложенные прямоугольники относятся к сегментам текста (см. Рис.14).
+Каждый боьлшой прямоугольник означает документ, каждый квадратик внутри прямоугольника - отрывок текста. Каждая строка стопки отражает набор запрошенных термов, а степень закрашенности квадратика - частоту встречаемости терма.</p>
+
+<p><img src="Figures/figure_14.png" alt="">
+<strong>Рис.14.</strong> Визуализация исходного исходного кода при помощи SeeSoft.</p>
+
+<h3 id="toc_20">6.3. Визуализация изменяющихся коллекций документов</h3>
+
+<p>Река Времени (TimeRiver), также называемая потоковым графом – способ визуализировать изменения тематик внутри корпуса с течением времени (Рис.15). Предполагается, что документы корпуса меняются с течением времени. Визуально тематики отображены в виде горизонтально ориентированных лент, толщина которых в определенном месте означает встречаемость темы в определенный момент времени. </p>
+
+<p><img src="Figures/figure_15.png" alt="">
+<strong>Рис.15.</strong> TimeRiver</p>
+
+<p><em>Jigsaw</em> – инструмент для визуализации и анализа текстовых корпусов. Календарь Jigsaw располагает документы на плоскости на основе того, когда определенные сущности появились в тексте. Когда пользователь выбирает документ, отображаются сущности, встречающиеся в этом документе. (Рис.16)</p>
+
+<p><img src="Figures/figure_16.png" alt="">
+<strong>Рис.16.</strong> Jigwaw Calendar View</p>
+
+<h3 id="toc_21">6.4. Отображение связей</h3>
+
+<p>Jigsaw также включаетс в себя и возможность отображения сущностей в виде графа (Рис. 18), с помощью которого пользователь имеет возможность исследовать связонные сущности из документов. Такой инструмент не отображает всю коллекцию документов целиком, но он позволяет итеративно выбирать нужные документы и исследовать корпус (Рис. 19).</p>
+
+<p><img src="Figures/figure_17.png" alt="">
+<strong>Рис.17.</strong> Визуализация сентимент-анализа.</p>
+
+<p><img src="Figures/figure_18.png" alt="">
+<strong>Рис.18.</strong> Jigsaw graph view – показывает связи между документами.</p>
+
+<p><img src="Figures/figure_19.png" alt="">
+<strong>Рис.19.</strong> Кластеризация документов</p>
+
+<p>The Jigsaw list view – альтернативный графу способ представлени документов, который позволяет пользователю исследовать связи между различными типами сущностей. На Рис.20 показан пример того, как пользователь может изучать интересующие его объекты.</p>
+
+<p><img src="Figures/figure_20.png" alt="">
+<strong>Рис.20.</strong> Jigsaw list view, показывающий связи между людьми (слева), местами (в центре) и организациями (справа).</p>
+
+<h2 id="toc_22">7. Заключение</h2>
+
+<p>В данной статье мы рассмотрели фундаментальные подходы к обработке неструктурированных текстовых данных в структурные данные, пригодные для визуализации и дальнейшего анализа. Мы показали визуальзацию в виде облака слов, словесных деревьев и и способы выявления тематик конкретного документа. Такие способы визуализации, как самоорганизующиеся карты, карты отображения и тематические пейзажи очень полезны для визуализации коллекции документов в целом. Для глубокого анализа корпуса со сложными связями и временными характеристиками мы кратко рассмотрели некоторые способы визуализации, такие как графы, ThemeRiver и календарь.</p>
+
+
+
+
+</body>
+
+</html>
