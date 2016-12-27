@@ -35,7 +35,7 @@ genetically|said|safety|engineered|study|test|great|deal|controversy|foods
 ###3.1. Подсчет весов
 Эта модель векторного пространства требует наличия у термов документа определенных весов. Существует множество методов для подсчета весов, наиболее известным из которыз яляется frequency inverse document frequency (tf-idf). Пусть *Tf(w)* - частота терма или количество раз, которые слово w встретилось в документе. Пусть также *Df(w)* – количество документов, содержащих данное слово. Также пусть *N* - число документов. Тогда определим *TfIdf(w)* как 
 
-	TfIdf(w) = Tf(w) ∗ log N .
+![](Figures/tf_idf.png)
 
 По сути, это есть относительная важность слова в документе, что отражет нашу интуитивное понимание важности слова. Слово тем более важно, чем в меньшем количестве документов оно встречается (наименьшее *Df*), а также, если оно  встречается в определенном документе несколько раз (наибольшее *Tf*). Говоря иначе, мы нам наиболее интересны слова, которые часто встречаются в каком-то конкретном документе, но при этом редко во всем корпусе в целом. Такие слова интуитивно болле важны, так как при помощи них можно разделять и классифицировать документы. На рис.1 показаны вектора термов для группы документов с использованием *tf-idf* весов.
 
@@ -112,36 +112,36 @@ genetically|said|safety|engineered|study|test|great|deal|controversy|foods
 ### 4.5 Литературный отпечаток (Literature fingerprinting)
 Литературный отпечаток – метод визуализации признаков, который используется для получения характеристике текста. Всесто того, чтобы считать вектор только для одного признака, мы считаем последователность признаков в тексте и показываем их пользователю, как характеристические "отпечатки" документа. Это позволяет пользователю "заглянуть" в документ и проанализировать значения. Более того, структурная информация, полученная из документа используется для визуализации документа на разных уровнях. Литературный отпечаток был применен для демонстрации несостоятельности стандартных подходов к анализу авторства и стиля произведения (см. Рис. 9).
 
-##5. Document Collection Visualizations
-In most cases of document collection visualizations, the goal is to place sim- ilar documents close to each other and dissimilar ones far apart. This is a minimax problem and typically O(n2). We compute the similarity between all pairs of documents and determine a layout. The common approaches are graph spring layouts, multidimensional scaling, clustering (k-means, hierar- chical, expectation maximization (EM), support vector), and self-organizing maps. We present several document collection visualizations, such as self- organizing maps, cluster maps, and themescapes.
-
-###Self-Organizing Maps
-
-A self-organizing map (SOM) [248] is an unsupervised learning algorithm using a collection of typically 2D nodes, where documents will be located. Each node has an associated vector of the same dimensionality as the input vectors (the document vectors) used to train the map. We initialize the SOM nodes, typically with random weights. We choose a random vector from the input vectors and calculate its distance from each node. We adjust the
-
 ![](Figures/figure_9.png)
-**Рис.9.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.9.** Техника Литературного отпечатка
 
-weights of the closest nodes (within a particular radius), making each closer to the input vector, with the higher weights corresponding to the closest selected node. As we iterate through the input vectors, the radius gets smaller. An example of using SOMs for text data is shown in Figure 10.10 [454], which shows a million documents collected from 83 newsgroups.
+##5. Визуалтзация коллекции докумунтов
+В большинстве задач по визуализации массива документов требуется разместить похожие документы максимально близко друг к другу, а отличающиеся – достаточно далеко. Это есть задача на Минимакс, обычно ее решение занимает O(n2). Суть в том, что мы рассчитываем сходство между всми частями документов и располагаем их определенным образом в пространстве (на плоскости). Наиболее распространеннымм способами отображения являются графы, многомерное масштабирование, кластеризация, самоорганизующиеся карты (self-organizing maps), карты кластеров и тематические пейзажи (themescapes);
 
-###Themescapes
-Themescapes are summaries of corpora using abstract 3D landscapes in which height and color are used to represent density of similar documents. The example shown in Figure 10.11 from Pacific Northwest National Labs [407] represents news articles visualized as a themescape. The taller moun- tains represent frequent themes in the document corpus (height is propor- tional to number of documents relating to the theme).
+### 5.1. Самоорганизующиеся карты (Self-Organizing Maps)
+Самоорганизующиеся карты – алгоритм машинного обучения без учителя, который использует 2D-ноды, в которых находятся документы. Каждая нода связана с вектором той же размерности, что и входной вектор (векторы документов), эти векторы нод испотльзубтся для обучения. Обычно эти ноды инициализируются со случайными весами. Мы выбираем соучайный вектор из входных векторов и рассчитываем расстояние до каждой ноды. Далее мы выбираем наиболее близкую ноду (с наименьшим радиусом) и подгоняем ее веса делая их наиболее похожими на входной вектор. Итерируясь по входным векторам мы делаем радиусы меньше. Пример использования этого подхода показан на Рис. 10. На нем изображен миллион документов, распределенный по 83 новостным группам.
 
 ![](Figures/figure_10.png)
-**Рис.10.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
-![](Figures/figure_11.png)
-**Рис.11.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
+**Рис.10.** Пример использования самоорганизующейся карты на основе финских новостных брошюр. 
 
-###Document Cards
-Document cards are a compact visualization (Figure 10.12) that represents the document’s key semantics as a mixture of images and important key terms, similar to cards in a top trumps game [400]. The key terms are extracted using an advanced text-mining approach based on an automatic extraction of document structure. The images and their captions are ex- tracted using a graphical heuristic, and the captions are used for a semi- semantic image weighting. Furthermore, the image color histogram is used to classify images into classes (class 1: photography/rendered image, class 2: diagram/sketch/graph, class 3: table) and show at least one representative from each non-empty class.
+### 5.2. Тематические пейзажи (Themescapes)
+Тематические пейзажи – по сути резюме всего корпуса, выглядит как 3D-пейзаж, в котором высоты и цвета используются для передачи полотности похожих документов. На примере, приведенном на Рис. 11 из Pacific Northwest National Labs показаны новостные статьи в виде тематического пейзажа. Высокие "горы" представляют собой популярные темы корпуса (высота пропорциональна числу документов на эту тему)
+
+![](Figures/figure_11.png)
+**Рис.11.** Пример тематического пейзажа.
+
+### 5.3. Карточки документов (Document Cards)
+Карточки документов – это способ компактной визаулизации (Рис. 12), который позволяет отразить ключевые семантические признаки документов в виде набора картинок и важных ключевых терминов.
+Изображения и их заголовки извлекаются при помощи графических эвристик, также заголовки используются в поусемантическом взвешивании изображений. К тому же, цветовая гистограмма изображения используется для классификации изображениям (фотография/график/набросок/таблицы). После чего полученные классы испотзуются для отображения.
+
+![](Figures/figure_12.png)
+**Рис.12.** Карточки документов
 
 ##6. Extended Text Visualizations
 Here we investigate several text visualization techniques that involve meta- data or otherwise go beyond the typical term-vector-based visualizations.
 ###Software Visualization
 Eick et al. developed a visualization tool called SeeSoft [108] that visualizes statistics for each line of code (i.e., age and number of modifications, pro- grammer, dates). In Figure 10.13, each column represents a source code file with the height representing the size of the file. If the file is longer than the screen, it continues into the next column. In the classic SeeSoft repre- sentation, each row represents one line of code. Since the number of lines is too large for one row, each line of code is represented by a pixel in the row. This increases the number of lines that can be displayed. Color is used to represent the call count. The more red a line is, the more often the line is called, and thus is a key hot-spot. A blue line is an infrequently called one. Color can be used to represent other parameters, such as time of last modification or number of modifications. With a 1K × 1K screen, SeeSoft is able to display up to 50,000 lines of code. This figure contains 52 files with 15,255 lines of code. The selected file is file1.c, a block of code with a zoomed-in view of line 408.
 
-![](Figures/figure_12.png)
-**Рис.12.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
 ![](Figures/figure_13.png)
 **Рис.13.** Пример документа, в котором выделены именованные сущности. Цвета означают тип сущности.
 
